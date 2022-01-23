@@ -1,3 +1,4 @@
+from warnings import catch_warnings
 import tweepy, os
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,5 +12,11 @@ account = "SarazarSamstag"
 user = api.get_user(screen_name=account)
 tweet = user.timeline()[0]
 
-tweet.retweet()
-tweet.favorite()
+try:
+	tweet.retweet()	
+except:
+    print("Already retweeted")
+try:
+	tweet.favorite()
+except:
+    print("Already favorited")
