@@ -1,8 +1,8 @@
 name: Check Tweet
 
 on:
-  schedule:
-    - cron: '16 12 * * 6'
+  #schedule:
+   #- cron: '16 12 * * 6'
   workflow_dispatch:
 jobs:
   build:
